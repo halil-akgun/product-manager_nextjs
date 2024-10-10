@@ -1,17 +1,22 @@
 "use client" // this is for client side rendering, so this file will not work in server side rendering
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import menuItems from './menu.json'
+import Link from 'next/link'
 
 const Header = () => {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" bg="dark" data-bs-theme="dark" collapseOnSelect>
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#home">Product Manager</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                        {menuItems.map((item) => (
+                            <Nav.Link as={Link} href={item.url} key={item.id}>
+                                {item.title}
+                            </Nav.Link>
+                        ))}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
