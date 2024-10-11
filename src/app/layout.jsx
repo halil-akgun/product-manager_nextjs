@@ -1,4 +1,3 @@
-import Header from "@/components/common/header";
 import { Inter } from "next/font/google";
 import "./index.scss";
 
@@ -11,9 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
+    <html lang="en" className="h-100">
+      <body className={`${inter.className} d-flex flex-column justify-content-between h-100`}>
         {children}
       </body>
     </html>
