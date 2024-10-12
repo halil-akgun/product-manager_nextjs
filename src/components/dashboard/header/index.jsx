@@ -3,11 +3,13 @@ import Link from 'next/link'
 import React from 'react'
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import "./header.scss";
+import menuItems from './menu.json'
 import { usePathname } from 'next/navigation';
 
 const DashboardHeader = () => {
 
     const pathName = usePathname();
+    
     return (
         <Navbar className={`bg-danger mb-3`} expand={false} collapseOnSelect>
             <Container>
@@ -25,19 +27,16 @@ const DashboardHeader = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Nav.Link href="/dashboard" as={Link} active={pathName === "/dashboard/profile"}>
-                                Dashboard
-                            </Nav.Link>
-                            <Nav.Link href="/dashboard/products" as={Link} active={pathName === "/dashboard/profile"}>
-                                Products
-                            </Nav.Link>
-                            <Nav.Link href="/dashboard/profile" as={Link} active={pathName === "/dashboard/profile"}>
-                                Profile
-                            </Nav.Link>
-                            <Nav.Link href="/" as={Link}>
-                                Home
-                            </Nav.Link>
-                            <Nav.Link>Signout</Nav.Link>
+                            {menuItems.map((item) => (
+                                <Nav.Link
+                                    as={Link}
+                                    href={item.url}
+                                    key={item.id}
+                                    active={pathName === item.url}
+                                >
+                                    {item.title}
+                                </Nav.Link>
+                            ))}
                         </Nav>
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
