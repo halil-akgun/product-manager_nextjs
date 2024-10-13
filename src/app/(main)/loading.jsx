@@ -3,8 +3,8 @@ import React from 'react'
 
 const LoadingPage = () => {
     return (
-        <div>
-            <Loader />
+        <div className='h-100 d-flex justify-content-center align-items-center'>
+            <Loader size="lg" variant="primary" />
         </div>
     )
 }
