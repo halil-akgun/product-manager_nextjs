@@ -1,6 +1,7 @@
 import { wait } from '@/utils/misc'
 import Image from 'next/image';
 import React from 'react'
+import logo from '../../../../public/images/logo.png'
 
 const ContactPage = async () => {
   await wait(2000);
@@ -13,6 +14,7 @@ const ContactPage = async () => {
           style={{ objectFit: 'cover', objectPosition: 'center' }} // objectFit ensures the image maintains its aspect ratio while covering the entire container, and objectPosition centers the image within the space
         />
       </div>
+      <Image src={logo} alt="logo" /> {/* when we use import, we don't have to set width and height */}
     </div>
   )
 }
