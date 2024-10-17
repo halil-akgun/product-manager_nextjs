@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google";
 import "./index.scss";
-
-const inter = Inter({ subsets: ["latin"] });
+import { roboto } from "@/utils/font";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +8,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-100">
-      <body className={`${inter.className} d-flex flex-column justify-content-between h-100`}>
+    <html lang="en" className={`${roboto.variable} h-100`}>
+      <body className="d-flex flex-column justify-content-between h-100">
         {children}
       </body>
     </html>

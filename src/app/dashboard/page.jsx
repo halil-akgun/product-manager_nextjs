@@ -1,8 +1,12 @@
+import Test from '@/components/dashboard/test'
 import React from 'react'
 
 const DashboardPage = () => {
   return (
-    <div>DashboardPage</div>
+    <div>
+      DashboardPage
+      <Test />
+    </div>
   )
 }
 

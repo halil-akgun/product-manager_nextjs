@@ -2,11 +2,13 @@ import { wait } from '@/utils/misc'
 import Image from 'next/image';
 import React from 'react'
 import logo from '../../../../public/images/logo.png'
+import PageHeader from '@/components/common/page-header';
 
 const ContactPage = async () => {
   await wait(2000);
   return (
     <div>
+      <PageHeader title="Contact" />
       ContactPage
       <div style={{ height: '500px', width: '500px', position: 'relative' }}>
         <Image src="https://picsum.photos/900/700" alt="img"

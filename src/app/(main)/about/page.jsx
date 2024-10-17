@@ -1,3 +1,4 @@
+import PageHeader from '@/components/common/page-header'
 import Image from 'next/image'
 import React from 'react'
 
@@ -5,6 +6,7 @@ const AboutPage = () => {
   // throw new Error('Something went wrong!')
   return (
     <div>
+      <PageHeader title="About" />
       AboutPage
 
       <Image src="https://picsum.photos/200/300" alt="img" width={200} height={300} />
