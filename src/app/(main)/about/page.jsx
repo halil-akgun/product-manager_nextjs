@@ -2,6 +2,11 @@ import PageHeader from '@/components/common/page-header'
 import Image from 'next/image'
 import React from 'react'
 
+export const metadata = {
+  title: "About",
+  description: "You can buy anything here",
+};
+
 const AboutPage = () => {
   // throw new Error('Something went wrong!')
   return (
