@@ -7,6 +7,8 @@ export const metadata = {
   description: "You can buy anything here",
 };
 
+// export const dynamic = "force-dynamic"; // this is for server side rendering
+
 const AboutPage = () => {
   // throw new Error('Something went wrong!')
   return (
