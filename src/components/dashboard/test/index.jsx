@@ -3,9 +3,13 @@ import React from "react";
 import styles from "./index.module.scss";
 const Test = () => {
 
+	const handleClick = () => {
+		alert("test")
+	}
+
 	return (
 		<div className={styles.testComp}>
-			<a href="#">Test Link</a>
+			<button onClick={handleClick}>Test</button>
 		</div>
 	);
 };
