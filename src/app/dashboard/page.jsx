@@ -9,7 +9,7 @@ const DashboardPage = () => {
       DashboardPage
       <Test />
       <ClientComp>
-        <ServerComp /> {/* ServerComp is still rendered on the server because it's being passed as a child of ClientComp but not directly used within it */}
+        <ServerComp /> {/* ServerComp is still rendered on the server because it's being passed as a child of ClientComp but not directly used within it. */}
       </ClientComp>
     </div>
   )
