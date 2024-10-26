@@ -15,8 +15,6 @@ const ProductsPage = async () => {
   const res = await fetch(`${config.apiURL}/products`);
   const products = await res.json();
 
-  console.log(products);
-
   return (
     <div>
       <PageHeader title="Products" />
