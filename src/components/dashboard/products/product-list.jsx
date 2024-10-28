@@ -8,6 +8,7 @@ const ProductList = ({ products }) => {
             <Table striped bordered hover>
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Id</th>
                         <th>Title</th>
                         <th>Category</th>
@@ -16,8 +17,8 @@ const ProductList = ({ products }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map(product => (
-                        <ProductRow key={product.id} products={product} />
+                    {products.map((item, index) => (
+                        <ProductRow key={item.id} {...item} seq={index + 1} />
                     ))}
                 </tbody>
             </Table>
