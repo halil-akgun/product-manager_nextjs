@@ -7,7 +7,7 @@ import CancelButton from "@/components/common/form-controls/cancel-button";
 const EditProductForm = ({ product }) => {
     // const initialState = { message: null, errors: {} };
 
-    // useFormstate hook u ile form ve server actin arasinda  cift yonlu bir iletisim kanali olusur
+    // useFormstate hook'u ile form ve server actin arasinda cift yonlu bir iletisim kanali olusur
     // dispatch ile formdan server action a
     // state ile server actin dan form a
     // const [state, dispatch] = useFormState(updateProductAction, initialState);
