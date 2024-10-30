@@ -4,6 +4,12 @@ import ProductList from '@/components/products/product-list';
 import { config } from '@/utils/config';
 import React from 'react'
 
+// export const revalidate = 60;
+// Ensures that data fetched is removed from the 'data cache' after 60 seconds.
+
+// export const dynamic = 'force-dynamic';
+// Disables caching entirely.
+
 export const metadata = {
   title: "Products",
   description: "You can buy anything here",
