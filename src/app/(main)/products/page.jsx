@@ -31,4 +31,4 @@ const ProductsPage = async () => {
   )
 }
 
-export default ProductsPage
+export default ProductsPage;
