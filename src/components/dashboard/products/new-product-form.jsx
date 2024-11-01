@@ -3,12 +3,13 @@ import SubmitButton from "@/components/common/form-controls/submit-button";
 import { useFormState } from "react-dom";
 import { Form } from "react-bootstrap";
 import CancelButton from "@/components/common/form-controls/cancel-button";
+import { createProductAction } from "@/actions/product-actions";
 
 const NewProductForm = () => {
 
     return (
         <>
-            <Form>
+            <Form action={createProductAction}>
                 <Form.Group className="mb-3">
                     <Form.Label>Title</Form.Label>
                     <Form.Control
