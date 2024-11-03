@@ -7,17 +7,24 @@ import { createProductAction } from "@/actions/product-actions";
 
 const NewProductForm = () => {
 
+    const initialState = { message: null, errors: {} };
+
+    const [state, dispatch] = useFormState(createProductAction, initialState);
+
+    const { title, description, price, category, image } = state.errors;
+
     return (
         <>
-            <Form action={createProductAction}>
+            <Form action={dispatch}>
                 <Form.Group className="mb-3">
                     <Form.Label>Title</Form.Label>
                     <Form.Control
                         name="title"
                         type="text"
+                        isInvalid={!!title}
                     />
                     <Form.Control.Feedback type="invalid">
-                        {/* {title} */}
+                        {title}
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -26,8 +33,10 @@ const NewProductForm = () => {
                         name="description"
                         as="textarea"
                         rows={3}
+                        isInvalid={!!description}
                     />
                     <Form.Control.Feedback type="invalid">
+                        {description}
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -35,14 +44,17 @@ const NewProductForm = () => {
                     <Form.Control
                         name="price"
                         type="number"
+                        isInvalid={!!price}
                     />
                     <Form.Control.Feedback type="invalid">
+                        {price}
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Category</Form.Label>
                     <Form.Select
                         name="category"
+                        isInvalid={!!category}
                     >
                         <option value="">Select</option>
                         <option value="Home">Home</option>
@@ -52,6 +64,7 @@ const NewProductForm = () => {
                         <option value="Grocery">Grocery</option>
                     </Form.Select>
                     <Form.Control.Feedback type="invalid">
+                        {category}
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -59,8 +72,10 @@ const NewProductForm = () => {
                     <Form.Control
                         name="image"
                         type="text"
+                        isInvalid={!!image}
                     />
                     <Form.Control.Feedback type="invalid">
+                        {image}
                     </Form.Control.Feedback>
                 </Form.Group>
 
