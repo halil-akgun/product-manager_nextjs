@@ -48,7 +48,7 @@ export const createProductAction = async (prevState, formData) => {
         return {
             message: "Something went wrong!",
             errors: {
-                commenError: error.message
+                common: error.message
             }
         }
     }
@@ -87,7 +87,7 @@ export const updateProductAction = async (prevState, formData) => {
         return {
             message: "Something went wrong!",
             errors: {
-                commenError: error.message
+                common: error.message
             }
         }
     }
@@ -124,7 +124,7 @@ export const deleteProductAction = async (id) => {
         return {
             message: "Something went wrong!",
             errors: {
-                commenError: error.message
+                common: error.message
             }
         }
     }
