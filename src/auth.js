@@ -31,7 +31,7 @@ const config = {
 
     callbacks: {
         // bu callback mutlaka tanimlanmali
-        // middleware icinde aktihf hale getirilen route lara her giriste calisir
+        // middleware icinde aktihf hale getirilen route'lara her giriste calisir
         // eger bu callback true donerse route icine girlir, yoksa signin sayfasina gidilir
         authorized({ request, auth }) {
             console.log(auth);
