@@ -4,12 +4,19 @@ import React from 'react'
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import "./header.scss";
 import menuItems from './menu.json'
-import { usePathname } from 'next/navigation';
+import { redirect, usePathname } from 'next/navigation';
+import { signOut } from 'next-auth/react';
 
 const DashboardHeader = () => {
 
     const pathName = usePathname();
-    
+
+    const handleSignout = () => {
+        const resp = confirm("Are you sure you want to signout?");
+        if (!resp) return;
+        signOut({ callbackUrl: "/" });
+    }
+
     return (
         <Navbar className={`bg-danger mb-3`} expand={false} collapseOnSelect>
             <Container>
@@ -37,6 +44,9 @@ const DashboardHeader = () => {
                                     {item.title}
                                 </Nav.Link>
                             ))}
+                            <Nav.Link onClick={handleSignout} >
+                                Signout
+                            </Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>

@@ -1,5 +1,6 @@
 import "./index.scss";
 import { roboto } from "@/utils/font";
+import { SessionProvider } from "next-auth/react";
 
 export const metadata = {
   title: {
@@ -13,7 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable} h-100`}>
       <body className="d-flex flex-column justify-content-between h-100">
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
