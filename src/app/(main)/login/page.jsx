@@ -1,4 +1,6 @@
 import PageHeader from '@/components/common/page-header'
+import Spacer from '@/components/common/spacer';
+import LoginForm from '@/components/login/login-form';
 import React from 'react'
 
 export const metadata = {
@@ -10,7 +12,9 @@ const LoginPage = () => {
   return (
     <div>
       <PageHeader title="Login" />
-      LoginPage
+      <Spacer height={50} />
+      <LoginForm />
+      <Spacer height={50} />
     </div>
   )
 }

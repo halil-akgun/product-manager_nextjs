@@ -31,7 +31,7 @@ const Header = () => {
                 {session?.user ?
                     (<Link href="/dashboard">Dashboard</Link>)
                     :
-                    (<Link href="/api/auth/signin">Signin</Link>)
+                    (<Link href="/login">Signin</Link>)
                 }
             </Container>
         </Navbar>
