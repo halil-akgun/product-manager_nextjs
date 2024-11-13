@@ -41,7 +41,7 @@ export const createProductAction = async (prevState, formData) => {
         };
 
     } catch (error) {
-        console.log(error);
+        console.error(error);
         if (error instanceof Yup.ValidationError) {
             return getYupErrors(error.inner);
         }
@@ -80,7 +80,7 @@ export const updateProductAction = async (prevState, formData) => {
         };
 
     } catch (error) {
-        console.log(error);
+        console.error(error);
         if (error instanceof Yup.ValidationError) {
             return getYupErrors(error.inner);
         }
@@ -117,7 +117,7 @@ export const deleteProductAction = async (id) => {
             throw new Error(data.message || "Something went wrong!");
         };
     } catch (error) {
-        console.log(error);
+        console.error(error);
         if (error instanceof Yup.ValidationError) {
             return getYupErrors(error.inner);
         }

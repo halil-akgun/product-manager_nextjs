@@ -9,8 +9,6 @@ import { useSession } from 'next-auth/react'
 const Header = () => {
 
     const { data: session } = useSession();
-    console.log(session);
-    console.log('*****************');
 
     return (
         <Navbar expand="lg" bg="dark" data-bs-theme="dark" collapseOnSelect>

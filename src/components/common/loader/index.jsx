@@ -6,7 +6,6 @@ import { Spinner } from 'react-bootstrap'
 const Loader = (props) => {
     return (
         <div>
-            {/* <Spinner animation={animation} size={size} variant={variant} /> */}
             <Spinner animation="border" size="sm" variant="danger" {...props} />
         </div>
     )

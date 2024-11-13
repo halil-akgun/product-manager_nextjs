@@ -14,7 +14,7 @@ const BtnDeleteProduct = ({ id, title }) => {
             const resp = await deleteProductAction(id)
             if (resp.errors.common) alert(resp.errors.common)
         } catch (error) {
-            console.log(error)
+            console.error(error)
         }
     }
 

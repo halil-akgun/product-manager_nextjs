@@ -21,7 +21,7 @@ export const signInWithCredentials = async (prevState, formData) => {
         FormSchema.validateSync(fields, { abortEarly: false });
         await signIn("credentials", fields)
     } catch (error) {
-        console.log(error);
+        console.error(error);
 
         if (error instanceof Yup.ValidationError) {
             return getYupErrors(error.inner);
