@@ -61,5 +61,5 @@ const config = {
     }
 }
 
-// Olusturulan config nesnesine gore tum altyapiyi hazirlayan NextAuth metodudur.
+// Olusturulan config nesnesine gore tum altyapiyi hazirlayan NextAuth metodudur
 export const { handlers, auth, signIn, signOut } = NextAuth(config)
