@@ -40,7 +40,7 @@ const config = {
             const { pathname, searchParams } = request.nextUrl;
 
             const isUserLoggedIn = !!auth?.user;
-            const isUserInLoginPage = pathname === '/login';
+            const isUserInLoginPage = pathname === "/login";
 
 
             if (isUserLoggedIn && isUserInLoginPage) {
