@@ -1,5 +1,5 @@
-export { auth as middleware } from "@/auth";
 // Bu satir authentication yapisinin tum uygulamada devreye alinmasini saglar
+export { auth as middleware } from "@/auth";
 
 
 // Eger istenirse config tanimlanarak bu kapsama alani belirlenebilir
